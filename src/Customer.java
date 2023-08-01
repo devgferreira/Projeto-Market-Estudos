@@ -23,7 +23,8 @@ public class Customer {
         CashOnHand = cashOnHand;
     }
 
-    public void purchaseC(Product product, Employee emp){
+    public void purchase(Product product, Employee emp){
+        product.Sum(product);
         emp.handleCustomer(this, product);
     }
 }

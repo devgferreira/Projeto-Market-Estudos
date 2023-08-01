@@ -34,9 +34,18 @@ public class Product {
     }
 
     public void Sum(Product product){
-        if(product.Amount > 1){
+        for(int i = 1; product.getAmount() > i; i++){
             double newPrice = product.getPrice() + product.getPrice();
             setPrice(newPrice);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "Name='" + Name + '\'' +
+                ", Price=" + Price +
+                ", Amount=" + Amount +
+                '}';
     }
 }

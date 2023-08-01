@@ -26,15 +26,15 @@ public class Employee {
     }
 
     public void handleCustomer(Customer cust, Product product){
-        if(product.getPrice() <= cust.getCashOnHand()){
 
+        if(product.getPrice() <= cust.getCashOnHand()){
             processTransaction(cust,  product);
         }else{
             System.out.println("Customer will need more money to purchase: " + product);
         }
     }
     public void processTransaction(Customer cust, Product product){
-        product.Sum(product);
+
         System.out.println("Customer has purchased the product: " + product+ "for the price: " + product.getPrice());
     }
 }
