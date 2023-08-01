@@ -3,4 +3,9 @@ public class Section {
     public Section(String name) {
         Name = name;
     }
+
+    @Override
+    public String toString() {
+        return '\'' + Name + '\'';
+    }
 }

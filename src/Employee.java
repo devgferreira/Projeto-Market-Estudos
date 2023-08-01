@@ -25,8 +25,13 @@ public class Employee {
         Age = age;
     }
 
-    public void handleCustomer(Customer cust, Product product){
+    public void infoEmployee(Employee emp){
+        System.out.println("Employe: " + emp);
+    }
 
+
+
+    public void handleCustomer(Customer cust, Product product){
         if(product.getPrice() <= cust.getCashOnHand()){
             processTransaction(cust,  product);
         }else{
@@ -37,4 +42,13 @@ public class Employee {
 
         System.out.println("Customer has purchased the product: " + product+ "for the price: " + product.getPrice());
     }
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "Name='" + Name + '\'' +
+                ", Age=" + Age +
+                ", Section=" + Section +
+                '}';
+    }
+
 }

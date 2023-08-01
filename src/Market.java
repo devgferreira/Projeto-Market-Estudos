@@ -7,6 +7,8 @@ public class Market {
         Customer customer = new Customer("Helber", 80);
 
         customer.purchase(beef, emp);
+        System.out.println("------------------------------");
+        emp.infoEmployee(emp);
 
     }
 
