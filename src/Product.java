@@ -1,6 +1,6 @@
 public class Product {
     private String Name;
-    private int Price;
+    private double Price;
     private int Amount;
 
     public Product(String name, int price, int amount) {
@@ -17,11 +17,11 @@ public class Product {
         Name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return Price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         Price = price;
     }
 
@@ -31,5 +31,12 @@ public class Product {
 
     public void setAmount(int amount) {
         Amount = amount;
+    }
+
+    public void Sum(Product product){
+        if(product.Amount > 1){
+            double newPrice = product.getPrice() + product.getPrice();
+            setPrice(newPrice);
+        }
     }
 }
