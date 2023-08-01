@@ -25,4 +25,14 @@ public class Employee {
         Age = age;
     }
 
+    public void handleCustomer(Customer cust, Product pruduct){
+        if(pruduct.getPrice() <= cust.getCashOnHand()){
+            processTransaction(cust,  pruduct);
+        }else{
+            System.out.println("Customer will need more money to purchase: " + pruduct);
+        }
+    }
+    public void processTransaction(Customer cust, Product pruduct){
+        System.out.println("Customer has purchased the product: " + pruduct+ "for the price: " + pruduct.getPrice());
+    }
 }

@@ -23,5 +23,7 @@ public class Customer {
         CashOnHand = cashOnHand;
     }
 
-    public void purchaseC(){}
+    public void purchaseC(Product product, Employee emp){
+        emp.handleCustomer(this, product);
+    }
 }
